@@ -1,0 +1,38 @@
+' use client ' // ce serveur est exécuté dans le navigateur pas le serveur
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { sourGummy } from "@/app/font";
+import BurgerMenu from './BurgerMenu';
+
+const navigation = [
+    { name: 'Home', href: '/', },
+    { name: 'About', href: '/about' },
+    { name: 'Cats', href: '/cats' },
+    { name: 'Contact', href: '/contact' },
+];
+
+export default function NavBar()
+{
+    const pathname = usePathname();
+
+    return(
+        <>
+            <nav className={`flex !p-5 justify-between bg-fuchsia-800 text-white  ${sourGummy.className}`}>
+                <img src='/images/logo_cat.png' alt='Logo Cat API' width="50" height="50"></img>
+                <div className='flex justify-between items-center w-100 text-xl xl:!mr-40'>
+                    <BurgerMenu />
+                    {navigation.map((item) => (
+                        <Link 
+                            key={item.name}
+                            href={item.href}
+                            className= {`hover:text-violet-500 transition-colors duration-500 h-8 hidden md:flex ${pathname === item.href ? 'border-b-2 border-violet-500' : ''}`}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                </div>
+            </nav>
+        </>
+    )
+}

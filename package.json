@@ -8,7 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "install": "^0.13.0",
     "next": "16.1.6",
+    "npm": "^11.9.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
