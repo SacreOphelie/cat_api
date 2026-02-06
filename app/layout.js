@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <main>
             {children}
         </main>
-        <footer>
+        <footer className="w-screen h-25 bg-fuchsia-800 text-white box-shadow-lg shadow-[0_-10px_15px_rgba(150,50,200,0.5)] ">
           <Footer />
         </footer>
       </body>

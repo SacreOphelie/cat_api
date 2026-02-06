@@ -22,7 +22,7 @@ export default function NavBar()
 
     return(
         <>
-            <nav className="flex !p-5 justify-between bg-fuchsia-800 text-white">
+            <nav className=" fixed w-screen flex !p-5 justify-between bg-fuchsia-800 text-white">
                 <img src='/images/logo_cat.png' alt='Logo Cat API' width="50" height="50"></img>
                 <div className='flex justify-between items-center w-100 text-xl !mr-30'>
                     <BurgerMenu />
