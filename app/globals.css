@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 @theme{
-  --font-sour-gummy : var(--font-sour-gummy),sans-serif
+  --font-sour-gummy : var(--font-sour-gummy),sans-serif;
+  --color-tulipe : #ffffcb;
 }
 
 *{
     margin: 0;
     padding: 0;
+}
+
+body{
+  overflow-y: hidden;
 }

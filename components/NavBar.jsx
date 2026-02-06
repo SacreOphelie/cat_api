@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { sourGummy } from "@/app/font";
 import BurgerMenu from './BurgerMenu';
 
 const navigation = [
@@ -23,9 +22,9 @@ export default function NavBar()
 
     return(
         <>
-            <nav className={`flex !p-5 justify-between bg-fuchsia-800 text-white  ${sourGummy.className}`}>
+            <nav className="flex !p-5 justify-between bg-fuchsia-800 text-white">
                 <img src='/images/logo_cat.png' alt='Logo Cat API' width="50" height="50"></img>
-                <div className='flex justify-between items-center w-100 text-xl xl:!mr-40'>
+                <div className='flex justify-between items-center w-100 text-xl !mr-30'>
                     <BurgerMenu />
                     {navigation.map((item) => (
                         <Link 
