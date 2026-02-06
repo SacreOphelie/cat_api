@@ -12,8 +12,13 @@ const navigation = [
     { name: 'Contact', href: '/contact' },
 ];
 
+/**
+ * La barre de navigation du site (responsive grâce au composant BurgerMenu)
+ * @returns 
+ */
 export default function NavBar()
 {
+    // Permet de savoir sur quelle page on se trouve pour appliquer une classe CSS spécifique au lien actif
     const pathname = usePathname();
 
     return(
