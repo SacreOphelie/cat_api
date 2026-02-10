@@ -34,7 +34,7 @@ export default function CatsPage() {
             </div>
             <div className=" flex items-center justify-between !p-2">
                 {/* Mettre en favoris */}
-                <svg className="w-10 h-8 cursor-pointer text-white hover:text-pink-200 hover:scale-110" version="1.0" id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <svg className="w-10 h-8 cursor-pointer text-white hover:text-pink-200 hover:scale-110" version="1.0" id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                     <g>
                         {/* le currentColor va prendre la couleur du texte parent => permettra au hover de fonctionner */}
                         <path fill="currentColor" d="M48,6c-4.418,0-8.418,1.791-11.313,4.687l-3.979,3.961c-0.391,0.391-1.023,0.391-1.414,0
