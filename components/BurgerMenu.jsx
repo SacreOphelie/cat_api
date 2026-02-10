@@ -41,7 +41,7 @@ export default function BurgerMenu()
                 </button>
                     {/* Animation de la page Menu  */}
                     <div className={`fixed top-0 left-0 w-screen h-screen bg-fuchsia-800 flex justify-center items-center z-50 transform transition-all duration-500
-                                    ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
+                    ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
                         <div className="flex flex-col gap-10 text-3xl  items-center">
                             {/* Le setOpen(false) permet de fermer le menu burger quand on clique sur un lien */}
                             <Link href="/" onClick={() => setOpen(false)}>Home</Link>

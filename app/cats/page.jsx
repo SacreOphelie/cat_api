@@ -1,4 +1,4 @@
-"use client" // ici on utilise use client car il y a un useEffect, un useStat et un fetch
+"use client" // ici on utilise use client car il y a un useEffect, un useState et un fetch
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -9,6 +9,9 @@ import Image from "next/image";
  */
 export default function CatsPage() {
   const [cat, setCat] = useState(null);
+
+  // Gérer le chargement de l'image
+  const [imgLoad, setImgLoad] =useState(true);
 
   useEffect(() => {
     fetch("https://api.thecatapi.com/v1/images/search?limit=1", {
@@ -23,16 +26,23 @@ export default function CatsPage() {
   return (
     <div className="w-screen h-screen flex items-center justify-center">
       {cat && (
-        <div className="w-100 h-100 rounded-2xl !p-4 bg-fuchsia-800">
-            <div className=" w-full h-80 relative rounded-2xl overflow-hidden">
+        <div className="w-100 h-125 rounded-2xl !p-5 bg-fuchsia-800 flex flex-col items-center justify-center gap-5">
+            <div className=" w-full h-80 rounded-2xl overflow-hidden relative z-10">
+              {/* Gérer le chargement de l'image */}
+              {imgLoad && (
+                  <div className=" inset-0 flex items-center justify-center bg-fuchsia-900/40 backdrop-blur-sm">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
                 <Image
                     src={cat.url}
                     alt="Cat"
                     fill
                     className="object-cover"
+                    onLoad={() => setImgLoad(false)}
                 />
             </div>
-            <div className=" flex items-center justify-between !p-2">
+            <div className=" flex items-center justify-between !p-2 w-full">
                 {/* Mettre en favoris */}
                 <svg className="w-10 h-8 cursor-pointer text-white hover:text-pink-200 hover:scale-110" version="1.0" id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                     <g>
