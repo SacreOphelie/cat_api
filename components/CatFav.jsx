@@ -20,9 +20,9 @@ export default function CatFav() {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-4 p-10 w-full h-full place-items-center overflow-y-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10 w-full h-full place-items-center overflow-y-auto">
         {favs.map(cat => (
-          <div className="w-35 h-25">
+          <div className="w-full h-45">
             <Image
               key={cat.id}
               src={cat.url}
