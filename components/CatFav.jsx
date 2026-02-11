@@ -29,7 +29,7 @@ export default function CatFav() {
               alt="fav cat"
               width={300}
               height={300}
-              className="rounded-xl w-full h-full"
+              className="rounded-xl w-full h-full object-cover"
             />
           </div>
         ))}
