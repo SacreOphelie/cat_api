@@ -34,13 +34,13 @@ export default function BurgerMenu()
     return(
         <>
             <div className='md:hidden'>
-                <button onClick={toggleMenu} className='flex flex-col h-8 justify-between z-100 fixed right-10 top-7.5'>
+                <button onClick={toggleMenu} className='flex flex-col h-8 justify-between z-50 fixed right-10 top-7.5'>
                     <span className={barTop}></span>
                     <span className={barMiddle}></span>
                     <span className={barBottom}></span>
                 </button>
                     {/* Animation de la page Menu  */}
-                    <div className={`fixed top-0 left-0 w-screen h-screen bg-fuchsia-800 flex justify-center items-center z-50 transform transition-all duration-500
+                    <div className={`fixed top-0 left-0 w-screen h-screen bg-fuchsia-800 flex justify-center items-center z-40 transform transition-all duration-500
                     ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
                         <div className="flex flex-col gap-10 text-3xl  items-center">
                             {/* Le setOpen(false) permet de fermer le menu burger quand on clique sur un lien */}

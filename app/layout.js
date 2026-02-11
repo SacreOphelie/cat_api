@@ -2,6 +2,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { sourGummy } from "@/app/font";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const metadata = {
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
           <Header />
         </header>
         <main>
+        <ToastContainer />
             {children}
         </main>
         <footer className="relative z-50 w-screen h-25 bg-fuchsia-800 text-white box-shadow-lg shadow-[0_-10px_15px_rgba(150,50,200,0.5)] ">
