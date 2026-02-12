@@ -59,7 +59,7 @@ export default function CatsPage() {
 
   return (
     <div className="w-screen h-screen flex items-center justify-center">
-      <div className="w-130 h-125 rounded-2xl !p-5 bg-fuchsia-800 flex flex-col items-center justify-center gap-5 !mx-5">
+      <div className="w-130 h-125 rounded-2xl !p-5 bg-fuchsia-800 flex flex-col items-center justify-center gap-5 !mx-5 !mt-50 !mb-25 md:!mt-25 md:!mb-0">
         <CatNav 
           onShowFavs={() => setShowFavs(true)} 
           onShowCats={() => setShowFavs(false)} 
